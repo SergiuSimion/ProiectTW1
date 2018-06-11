@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Wews</title>
+    <meta name="description" content="">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/categories.css">
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <div class="appLogo">
+            <div class="loggedIn">
+                <h3 class="connectedUser"></h3>
+                <button type="button" id="signOut"> Sign out</button>
+            </div>
+            <a href="index.html"><h1>wNews</h1></a>
+            <ul>
+                <li><a href="register.html" id="signUp"><h3>Sign up</h3></a></li>
+                <li><a href="login.html" id="signIn"><h3>Sign In</h3></a></li>
+                <li><a href="guide/about.html" id="about"><h3>About</h3></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="mainBody">
+        <div class="myCategories">
+
+            <div class="categTitle">
+                <h1 id="selectedCategTitle">All</h1>
+            </div>
+
+
+            <ul class="cList">
+
+            </ul>
+        </div>
+
+        <div id="news">
+        </div>
+
+        <div id="allCategories">
+          <h3 class="pageTitle">Loading most popular categories ... </h3>
+          <!-- <div class="categ">
+            <img src="https://pbs.twimg.com/profile_images/446566229210181632/2IeTff-V_400x400.jpeg" alt="" class="logo" />
+            <h3 class="title">category title</h3>
+            <h5 class="description">category description</h5>
+          </div> -->
+        </div>
+        <button id="saveCategories" disabled="true">Save</button>
+        <p id="saveMsg">Saved!</p>
+    </div>
+
+</div>
+<script src="scripts/main.js"></script>
+<script src="scripts/http.js"></script>
+<script src="scripts/redditApi.js"></script>
+<script src="scripts/htmlProvider.js"></script>
+
+</body>
+</html>

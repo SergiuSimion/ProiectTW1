@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js"> 
+<head>
+	<meta charset="utf-8">
+    <title>Wews - Account</title>
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/user.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="appLogo">
+                <a href="index.html"><h1>Wews</h1></a>
+            </div>
+        </header>
+        <div class="mainBody">
+            <h1>Log In or</h1>
+            <button type="button" id="showOptions">Register</button>
+
+            <form class="register">
+			
+                <h3> Username </h3>
+                <!--not allowed to start with number; lower/uppers letters, numbers and ., -, _ -->
+                <input type="text" placeholder="Enter your Username" class="regUserName" disabled pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+				
+				<h3> Password </h3>
+                <!--not allowed to start with number; lower/uppers letters, numbers and ., -, _ -->
+                <input type="password" placeholder="Enter your Password" class="reg" disabled pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+
+                
+                <button type="submit" id="saveUserInfo"> Log In </button>
+        </form> 
+
+        <div class="preferences" >
+            <div class="colorThemes">
+                <h3>Change your theme:</h3>
+                <ul>
+                    <li><input type="radio" name="theme" checked value="bgr1">Basic</li>
+                    <li><input type="radio" name="theme" value="bgr2">Cream</li>
+                    <li><input type="radio" name="theme" value="bgr3">Wood</li>
+                    <li><input type="radio" name="theme" value="bgr4">Light</li>
+                    <li><input type="radio" name="theme" value="bgr5">Sky</li>
+                </ul>
+            </div>
+
+            <div class="chooseCategs">
+                <h3>Choose your categories:</h3>
+                <ul class="preferredCateg"> </ul>
+            </div>
+
+            <button type="button" id="saveOptions">Save</button>
+        </div> 
+            
+        </div>  
+    </div>
+
+</body>
+	
+    
+</html>

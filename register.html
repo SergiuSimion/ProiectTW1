@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>wNews - Register</title>
+    <meta name="description" content="">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/md5.js"></script>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <div class="appLogo">
+            <a href="index.html"><h1>wNews</h1></a>
+            <ul>
+                <li><a href="login.html" id="signIn"><h3>Sign In</h3></a></li>
+                <li><a href="guide/about.html" id="about"><h3>About</h3></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="mainBody">
+        <form class="registerForm">
+
+            <h3> First Name </h3>
+            <!-- upper/lower letters with space and - -->
+            <input type="text" placeholder="Andrei" class="regFirstName" required pattern="[a-zA-Z-/(\s)/]+">
+
+            <h3> Last Name </h3>
+            <input type="text" placeholder="Ion" class="regLastName" required pattern="[a-zA-Z-/(\s)/]+">
+
+            <h3> Email </h3>
+            <input type="email" placeholder="Andrei.Ion@yahoo.com" class="regEmail" name="" value="" required
+                   pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
+
+
+            <h3 id="usr"> Username </h3>
+            <!--not allowed to start with number; lower/uppers letters, numbers and ., -, _ -->
+            <input type="text" placeholder="Andrei_Ion" class="regUserName" required
+                   pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+
+            <h3> Password </h3>
+            <!--minimum 6 characters: letter and upper letters and number required-->
+            <input type="password" placeholder="Password" class="regUserPass" required
+                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
+
+            <button type="button" id="submitBtn"> Submit</button>
+        </form>
+    </div>
+</div>
+<script src="scripts/register.js"></script>
+</body>
+
+
+</html>
